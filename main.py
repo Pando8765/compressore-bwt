@@ -11,12 +11,16 @@ for a in stringa:
     a=listaStringhe[i]
     listaStringhe.append(a[1:]+a[0])
     i=i+1  
-
 listaStringhe.pop()
 print("la lista della stringhe non ordinata è: \n",listaStringhe)
-
-
 
 #riordinamento alfabetico
 listaStringhe.sort()
 print("la lista della stringhe ordinata è: \n", listaStringhe)    
+
+#creazione stringa ordinata 
+stringaOrdinata=""
+for a in listaStringhe:
+    stringaOrdinata=stringaOrdinata + str(a[-1])
+    
+print("la parola ordinata è: \n",stringaOrdinata) 
