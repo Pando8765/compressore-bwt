@@ -12,11 +12,12 @@ stringa_originale=input("inserisci la stringa: ")
 client_sock.sendall(stringa_originale.encode())
 
 #ricezione stringa modificata
-stringa_modificata=client_sock
+stringa_modificata=client_sock.recv(1024)
+stringa_modificata=stringa_modificata.decode()
 
 #print 
 print (stringa_modificata)
 
 
 
-client_sock.close
+client_sock.close()
