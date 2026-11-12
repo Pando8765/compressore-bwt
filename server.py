@@ -19,4 +19,4 @@ stringa_originale=stringa_originale.decode()
 stringa_modificata=bwt(stringa_originale)
 
 #invio stringa modificata
-conn.sendall(stringa_modificata)
+conn.sendall(stringa_modificata.encode())

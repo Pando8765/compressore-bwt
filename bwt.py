@@ -14,8 +14,15 @@ def bwt(stringa):
     listaStringhe.pop()
     print("la lista della stringhe non ordinata è: \n",listaStringhe)
 
-    #riordinamento alfabetico
-    listaStringhe.sort()
+    #ordinamento a bolle
+    n=len(listaStringhe)
+    for i in range(n):
+        for j in range(0,n-i-1):
+            if listaStringhe[j]>listaStringhe[j+1]:
+                temp=listaStringhe[j]
+                listaStringhe[j]=listaStringhe[j+1]
+                listaStringhe[j+1]=temp
+    
     print("la lista della stringhe ordinata è: \n", listaStringhe)    
 
     #creazione stringa ordinata 
